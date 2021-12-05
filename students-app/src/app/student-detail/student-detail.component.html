@@ -1,0 +1,43 @@
+<div *ngIf="student" class="ms-3 mt-4">
+    <h2>{{student.lastName}} info</h2>
+    <div class="mt-3 d-flex justify-content-between" style="width: 270px;">
+        <label for="firstName">Name: </label>
+        <input id="firstName" [(ngModel)]="student.firstName" placeholder="name">
+    </div>
+    <div class="mt-2 d-flex justify-content-between" style="width: 270px;">
+        <label for="lastName">Surname: </label>
+        <input id="lastName" [(ngModel)]="student.lastName" placeholder="surname">
+    </div>
+    <ul class="list-group mt-3 mb-5" style="width:170px;">
+        <li class="list-group-item d-flex">
+            <div class="ms-auto me-auto d-flex justify-content-between">
+                <label for="math">Math:</label>
+                <input id="math" [(ngModel)]="student.marks.Math" class="d-flex w-25 ms-3 ps-2">
+            </div>
+        </li>
+        <li class="list-group-item d-flex">
+            <div class="ms-auto me-auto d-flex justify-content-between">
+                <label for="physics">Physics:</label>
+                <input id="physics" [(ngModel)]="student.marks.Physics" class="d-flex w-25 ms-3 ps-2">
+            </div>
+        </li>
+        <li class="list-group-item d-flex">
+            <div class="ms-auto me-auto d-flex justify-content-between">
+                <label for="chemistry">Chemistry:</label>
+                <input id="chemistry" [(ngModel)]="student.marks.Chemistry" class="d-flex w-25 ms-3 ps-2">
+            </div>
+        </li>
+        <li class="list-group-item d-flex">
+            <div class="ms-auto me-auto d-flex justify-content-between">
+                <label for="biology">Biology:</label>
+                <input id="biology" [(ngModel)]="student.marks.Biology" class="d-flex w-25 ms-3 ps-2">
+            </div>
+        </li>
+        <li class="list-group-item d-flex">
+            <div class="ms-auto me-auto d-flex justify-content-between">
+                <label for="history">History:</label>
+                <input id="history" [(ngModel)]="student.marks.History" class="d-flex w-25 ms-3 ps-2">
+            </div>
+        </li>
+    </ul>
+</div>

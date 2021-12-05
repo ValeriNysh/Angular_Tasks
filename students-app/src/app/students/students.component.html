@@ -1,0 +1,25 @@
+<div class="ps-5 pe-5 pt-3 pb-5">
+<h2 style="color:blue; font-weight: bold;">Students list</h2>
+
+<div class="mt-3 mb-3">
+<button class="btn btn-warning w-25"
+    (click)="changeVisibility()">Show/hide Students list</button>
+<button class="btn btn-primary w-25 ms-1"
+    (click)="addStudent()">Add new student</button>
+</div>
+<div *ngIf="visible">
+    <ol class="list-group list-group-numbered w-50">
+        <li class="list-group-item d-flex justify-content-between align-items-start"
+        *ngFor="let student of students"
+        (click)="onSelect(student)"
+        [class.list-group-item-info]="student===selectedStudent">
+            <div class="ms-2 me-auto">
+                <div class="fw-bold">{{student.firstName}} {{student.lastName}}</div>
+            </div>
+            <button class="btn btn-danger rounded-pill"
+            (click)="removeStudent(student)">Delete</button>
+        </li>
+    </ol>
+</div>
+<app-student-detail [student]="selectedStudent"></app-student-detail>
+</div>
